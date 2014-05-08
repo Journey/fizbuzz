@@ -1,8 +1,10 @@
 describe("test::check input",function() {
 	
-	it("check checkSingleInt",function () {
-		expect(checkSingleInt([2,3,4])).toEqual([2,3,4]);
-		expect(checkSingleInt([2,2.2,4])).toEqual([]);
+	it("check checkThreeSingleInt",function () {
+		expect(checkThreeSingleInt("")).toEqual([]);
+		expect(checkThreeSingleInt("2,3,4,5")).toEqual([]);
+		expect(checkThreeSingleInt("2,s,4")).toEqual([]);
+		expect(checkThreeSingleInt("2,3,4")).toEqual(["2","3","4"]);
 	})
 
 	it("check checkUnique",function () {
